@@ -1,25 +1,32 @@
 /* start product dashboard styles */
 .product-dashboard {
   .p-list {
+  
+
     .product-box {
       height: 120px;
       max-height: 120px;
       border-radius: $border-radius-default;
       box-shadow: $box-shadow-secondary;
+      padding: 12px 12px 12px 12px;
+      display: flex;
       @include transition();
-
+    
       &:hover {
         background-color: $secondary-bg;
         @include transition();
       }
-
+    
       .item-image {
-        width: 120px;
-        min-width: 120px;
-        height: 120px;
-        object-fit: cover;
+        width: 100px;
+        height: auto;
+        max-height: 100px;
+        object-fit: contain;
         border-radius: $border-radius-default;
-      }
+      
+    }
+
+    
 
       .product-desc {
         @include text-ellipsis(2);
@@ -97,6 +104,7 @@
             margin: auto;
             max-width: 100%;
             max-height: 100%;
+            padding: 10px;
           }
         }
       }

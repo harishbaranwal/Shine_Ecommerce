@@ -1,12 +1,13 @@
-/**
- *
- * CartSummary
- *
- */
+// /**
+//  *
+//  * CartSummary
+//  *
+//  */
 
 import React from 'react';
 
 import { Container, Row, Col } from 'reactstrap';
+import PaymentButton from '../../PaymentButton';
 
 const CartSummary = props => {
   const { cartTotal } = props;
@@ -27,12 +28,19 @@ const CartSummary = props => {
             <p className='summary-label'>Total</p>
           </Col>
           <Col xs='3' className='text-right'>
-            <p className='summary-value'>${cartTotal}</p>
+            <p className='summary-value'>₹{cartTotal}</p>
           </Col>
         </Row>
+        <Row className='mb-2 summary-item'>
+          <Col xs='12' className='text-right'>
+            <PaymentButton  cartTotal={cartTotal}/>
+          </Col>
+        </Row>
+
       </Container>
     </div>
   );
 };
 
 export default CartSummary;
+

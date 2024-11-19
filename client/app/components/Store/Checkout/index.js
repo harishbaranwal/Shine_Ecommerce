@@ -7,6 +7,7 @@
 import React from 'react';
 
 import Button from '../../Common/Button';
+import PaymentButton from '../../PaymentButton';
 
 const Checkout = props => {
   const { authenticated, handleShopping, handleCheckout, placeOrder } = props;
@@ -20,11 +21,14 @@ const Checkout = props => {
           onClick={() => handleShopping()}
         />
         {authenticated ? (
-          <Button
-            variant='primary'
-            text='Place Order'
-            onClick={() => placeOrder()}
-          />
+          <>
+            <Button
+              variant='primary'
+              text='Place Order'
+              onClick={() => placeOrder()}
+            />
+        
+          </>
         ) : (
           <Button
             variant='primary'
@@ -32,9 +36,12 @@ const Checkout = props => {
             onClick={() => handleCheckout()}
           />
         )}
+        
       </div>
     </div>
   );
 };
 
 export default Checkout;
+
+

@@ -8,7 +8,7 @@ const PaymentButton = ({cartTotal}) => {
             const { amount, id: order_id, currency } = orderResponse.data;
 
             const options = {
-                key: 'rzp_test_ufGoxV9E2Qfxq0', // Enter the Key ID generated from the Dashboard
+                key: 'rzp_test_RL5tPQF3IiMMLp', // Enter the Key ID generated from the Dashboard
                 amount: amount.toString(),
                 currency: currency,
                 name: 'Shine_Ecom',
